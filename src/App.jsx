@@ -72,7 +72,8 @@ const Header = () => {
   )
 }
 
-const RestaurantCard = () => {
+const RestaurantCard = ({resName}) => {
+  // const {resName} = props;
   return (
     <div className='res-card'>
       <img
@@ -80,7 +81,7 @@ const RestaurantCard = () => {
         alt='res-logo'
         src="https://www.shutterstock.com/image-photo/restaurant-food-menu-photos-beer-260nw-2498587241.jpg"
       />
-      <h3>Meghanan Foods</h3>
+      <h3>{resName}</h3>
       <h4>4.4 stars</h4>
     </div>
   );
@@ -91,25 +92,9 @@ const Body = () => {
     <div className='body'>
       <div className='Search'>Search</div>
       <div className='res-container'>
+        <RestaurantCard resName = "KFC"/>
         <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
-        <RestaurantCard/>
+        <RestaurantCard resName = "Kolkata Rolls"/>
       </div>
     </div>
   );
